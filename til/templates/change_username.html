@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}    
+    {{ form.as_p }}
+    <button
+      class="primaryAction px-4 py-2 rounded-l-xl text-white m-0 transition login-btn-cstm"
+      type="submit"
+    >
+      Submit
+    </button>
+</form>
+
+{% endblock %}

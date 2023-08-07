@@ -1,0 +1,66 @@
+.login-container {
+  text-align: center;
+}
+
+form.login p,
+form.login button {
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+h1.h1-login {
+  margin-bottom: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+
+p.p-login {
+  margin-bottom: 5px;
+}
+
+form.login {
+  text-align: center;
+  padding: 20px;
+
+  background-color: rgb(214, 217, 224);
+  border-radius: 50%;
+}
+
+form.signup {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(214, 217, 224);
+  border-radius: 50%;
+}
+
+form.signup p,
+form.signup button {
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+form.signup p #id_email {
+  margin-top: 10px;
+}
+
+.login-btn-cstm,
+.signup-btn-cstm {
+  font-size: 0.875rem;
+  line-height: 0.5rem;
+}
+
+.login-btn-cstm {
+  background-color: #cab9be !important;
+}
+
+.login-btn-cstm:hover {
+  background-color: #b49ca3 !important;
+}
+
+.signup-btn-cstm {
+  background-color: #becab9 !important;
+}
+
+.signup-btn-cstm:hover {
+  background-color: #a3b49c !important;
+}

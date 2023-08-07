@@ -10,7 +10,10 @@ class Profile(models.Model):
         on_delete=models.CASCADE,
         related_name="profile"
     )
+    first_name = models.CharField(max_length=50, blank=True)
+    last_name = models.CharField(max_length=50, blank=True)
     image = ImageField(upload_to='profiles')
+    username = models.CharField(max_length=30, default='')
 
     def __str__(self):
         return self.user.username

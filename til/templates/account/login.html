@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block head_title %}Sign In{% endblock %} 
+{% block content %}
+<div class="login-container">
+  <h1 class="h1-login">Sign In</h1>
+
+  <p class="p-login">
+    If you have not created an account yet, then please sign up first.
+  </p>
+
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+    <input
+      type="hidden"
+      name="{{ redirect_field_name }}"
+      value="{{ redirect_field_value }}"
+    />
+    {% endif %}
+    <a class="button secondaryAction" href="{% url 'account_reset_password' %}"
+      >Forgot Password?</a
+    >
+    <button
+      class="primaryAction px-4 py-2 rounded-l-xl text-white m-0 transition login-btn-cstm"
+      type="submit"
+    >
+      Login
+    </button>
+    <a href="{{ signup_url }}">
+      <button
+        class="px-4 py-2 rounded-r-xl transition signup-btn-cstm"
+        type="button"
+      >
+        Sign Up
+      </button>
+    </a>
+  </form>
+</div>
+{% endblock %}
